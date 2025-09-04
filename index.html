@@ -52,11 +52,14 @@
       transform: scale(1.02);
     }
 
+    /* Images réduites, centrées et responsives */
     .mix img {
       width: 50%;
+      max-width: 100%;
       height: auto;
       border-radius: 10px;
-      margin-bottom: 20px;
+      display: block;
+      margin: 0 auto 20px auto;
     }
 
     .mix h2 {
@@ -67,7 +70,7 @@
 
     audio {
       width: 100%;
-      height: 50px; /* Player plus grand pour longs mixes */
+      height: 50px;
       margin-bottom: 10px;
       outline: none;
     }
@@ -89,9 +92,19 @@
 
     .tracklist {
       color: #ffffff;
-      text-align: left;
+      text-align: center; /* texte centré */
       margin-top: 10px;
       font-size: 0.95rem;
+    }
+
+    .tracklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 5px 0 0 0;
+    }
+
+    .tracklist li {
+      margin: 5px 0;
     }
 
     footer {
@@ -111,14 +124,18 @@
       audio {
         height: 40px;
       }
+
+      .mix img {
+        width: 70%; /* légèrement plus grande sur petits écrans */
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Didier Knecht -Techno Mixes</h1>
-  <p>Listen, telechargez et plongez dans mes sets de longue duree</p>
+  <h1>Didier Knecht - Techno Mixes</h1>
+  <p>Listen, téléchargez et plongez dans mes sets de longue durée</p>
 </header>
 
 <div class="mix-container">
@@ -133,7 +150,7 @@
     </audio>
     <a href="https://archive.org/download/didier-knecht-2-2025./Didier%20Knecht%20-%202%20-%202025..mp3" 
        download="DidierKnecht-Mix1-2025.mp3" class="download-btn">
-       Telecharger ce mix
+       Télécharger ce mix
     </a>
     <div class="tracklist">
       <h3>Tracklist :</h3>
@@ -145,14 +162,10 @@
     </div>
   </div>
 
-
-
-  <!-- Ajoute d'autres mixes ici -->
-
 </div>
 
 <footer>
-  © 2025 Didier Knecht
+  &copy; 2025 Didier Knecht. Tous droits réservés.
 </footer>
 
 </body>
