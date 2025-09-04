@@ -49,7 +49,7 @@
     }
 
     .mix:hover {
-      transform: scale(1.02);
+      transform: scale(1.00);
     }
 
     /* Images réduites, centrées et responsives */
@@ -58,6 +58,7 @@
       max-width: 100%;
       height: auto;
       border-radius: 10px;
+	  border: 1px solid rgba(64, 224, 208, 0.6); /* Cadre fin, blanc, discret */
       display: block;
       margin: 0 auto 20px auto;
     }
@@ -91,14 +92,15 @@
     }
 
     .tracklist {
-      color: #ffffff;
+      color: #40E0D0;
       text-align: center; /* texte centré */
       margin-top: 10px;
-      font-size: 0.95rem;
+      font-size: 0.90rem;
     }
 
     .tracklist ul {
-      list-style: none;
+      color: #ffffff;
+	  list-style: none;
       padding: 0;
       margin: 5px 0 0 0;
     }
@@ -143,17 +145,16 @@
   <!-- Mix 1 -->
   <div class="mix">
     <img src="1.jpeg" alt="Mix 1">
-    <h2>Didier Knecht - Mix 1 - 2025</h2>
+    <h2>Didier Knecht - 1 - 2025</h2>
     <audio controls>
       <source src="https://archive.org/download/didier-knecht-2-2025./Didier%20Knecht%20-%202%20-%202025..mp3" type="audio/mpeg">
       Votre navigateur ne supporte pas l'audio.
     </audio>
     <a href="https://archive.org/download/didier-knecht-2-2025./Didier%20Knecht%20-%202%20-%202025..mp3" 
        download="DidierKnecht-Mix1-2025.mp3" class="download-btn">
-       Télécharger ce mix
+       Download
 	   </a>
-<p>(Right-click → Save link as…)</p>
-    
+   
     <div class="tracklist">
       <h3>Tracklist :</h3>
       <ul>
