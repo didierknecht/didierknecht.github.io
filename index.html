@@ -52,13 +52,12 @@
       transform: scale(1.00);
     }
 
-    /* Images réduites, centrées et responsives */
     .mix img {
       width: 50%;
       max-width: 100%;
       height: auto;
       border-radius: 10px;
-	  border: 1px solid rgba(64, 224, 208, 0.6); /* Cadre fin, blanc, discret */
+      border: 1px solid rgba(64, 224, 208, 0.6);
       display: block;
       margin: 0 auto 20px auto;
     }
@@ -91,22 +90,53 @@
       background-color: #c2185b;
     }
 
-    .tracklist {
+    /* Tracklist déroulable centré avec début visible */
+    .tracklist details {
+      width: 100%;
+      text-align: center; /* centre le bouton */
+    }
+
+    .tracklist details summary {
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
       color: #40E0D0;
-      text-align: center; /* texte centré */
-      margin-top: 10px;
-      font-size: 0.90rem;
+      list-style: none;
+      outline: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .tracklist details summary::marker,
+    .tracklist details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tracklist details summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .tracklist details[open] summary::before {
+      transform: rotate(90deg);
     }
 
     .tracklist ul {
       color: #ffffff;
-	  list-style: none;
+      list-style: none;
       padding: 0;
-      margin: 5px 0 0 0;
+      margin: 0 auto;
+      text-align: center;
+      max-height: 1.6em; /* montre seulement la première ligne */
+      overflow: hidden;
+      transition: max-height 0.3s ease;
     }
 
-    .tracklist li {
-      margin: 5px 0;
+    .tracklist details[open] ul {
+      max-height: 2000px;
+      overflow: visible;
     }
 
     footer {
@@ -128,7 +158,7 @@
       }
 
       .mix img {
-        width: 70%; /* légèrement plus grande sur petits écrans */
+        width: 70%;
       }
     }
   </style>
@@ -151,17 +181,16 @@
       Votre navigateur ne supporte pas l'audio.
     </audio>
     <a href="https://archive.org/download/didier-knecht-1-2025./Didier%20Knecht%20-%201%20-%202025..mp3" 
-       download="DidierKnecht-Mix1-2025.mp3" class="download-btn">
-       Download
-	   </a>
-   
-    <div class="tracklist">
-      <h3>Tracklist :</h3>
-      <ul>
-  <li>KiNK - Strings - CLONE ROYAL OAK 32</li>
-  <li>Pinto (NYC) - Dangerous - JACK CITY RECORDS 004</li>
-  <li>Raw Instinct - De La Bass (Mousse T.'s House Mix) - DO IT MUSIC 0630</li>
-  <li>Hodge - Silo - MOTHER'S FINEST 001</li>
+       download="DidierKnecht-Mix1-2025.mp3" class="download-btn">Download</a>
+    
+<div class="tracklist">
+  <details>
+    <summary>View the tracklisting</summary>
+    <ul>
+      <li>KiNK - Strings - CLONE ROYAL OAK 32</li>
+      <li>Pinto (NYC) - Dangerous - JACK CITY RECORDS 004</li>
+      <li>Raw Instinct - De La Bass (Mousse T.'s House Mix) - DO IT MUSIC 0630</li>
+      <li>Hodge - Silo - MOTHER'S FINEST 001</li>
   <li>Projam - Into The Groove - RUNNING BACK 006</li>
   <li>Co-Fusion - Low-Flying - HARTHOUSE 033</li>
   <li>Dubfire & Flug - Algorithm - DCLTD 26S</li>
@@ -239,7 +268,150 @@
   <li>The Advent - Two Zero Three - SYNTHETIK SOUNDS 004</li>
   <li>Yigitoglu & KVTS - Sundowner - SYNTHETIK SOUNDS 006</li>
   <li>Zisko - The Wolfpack Ceremony - UNCAGE 058</li>
-</ul>
+      </ul>
+    </details>
+  </div>
+</div> 
+
+
+<!-- Mix 2 -->
+
+
+  <div class="mix">
+    <img src="2.jpeg" alt="Mix 2">
+    <h2>Didier Knecht - 2 - 2025</h2>
+    <audio controls>
+      <source src="https://archive.org/download/didier-knecht-2-2025./Didier%20Knecht%20-%201%20-%202025..mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l'audio.
+    </audio>
+    <a href="https://archive.org/download/didier-knecht-2-2025./Didier%20Knecht%20-%201%20-%202025..mp3" 
+       download="DidierKnecht-Mix2-2025.mp3" class="download-btn">
+       Download
+    </a>
+    <div class="tracklist">
+  <details>
+    <summary>View the tracklisting</summary>
+    <ul>
+ 
+  <li>Candido - Jingo (Dr Packer Rework) - SALSOUL RECORDS 4050538307474</li>
+  <li>Dennis Ferrer - Transitions (Macromism Remix) - NITE GROOVES 422</li>
+  <li>Hamza Rahimtula & Loopy Juice - Soumba Soumba - WIND HORSE RECORDS 052</li>
+  <li>Joe Vanditti & Michel Tallè - Suite - IBIZA TALENTS 040</li>
+  <li>Keith Carnal - Wiedergutmachung - BPITCH X017</li>
+  <li>KiNK - Valentine's Groove - CLONE ROYAL OAK 32</li>
+  <li>Malone & Calussa - Besame - ABRACADABRA 031</li>
+  <li>Mihai Popoviciu - Breath Control - TBX RECORDS 33</li>
+  <li>Nicole Moudaber & Alan T - The Volume - MOOD RECORDS 080</li>
+  <li>Pier Bucci - Hay Consuelo (Samim Remix) - CROSSTOWN REBELS 031</li>
+  <li>Pinto (NYC) - Dangerous - JACK CITY RECORDS 004</li>
+  <li>Ronan Portela & Ariel Rodz - La Ensenada - AREA REMOTE 031</li>
+  <li>Rory Marshall - Don't Diss the 909 (Extended Mix) - BUSH 4090</li>
+  <li>Round Table Knights - Calypso (Horatio Edit) - MADE TO PLAY 025</li>
+  <li>Rowetta & Gary Burrows - No Different - RESPEKT RECORDINGS 204</li>
+  <li>Tektonauts & Armandd G - La Luna - NERVOUS RECORDS 25722</li>
+  <li>Adana Twins - The Curve - WATERGATE RECORDS 084</li>
+  <li>Charlotte De Witte - Kali - KNTXT 015</li>
+  <li>Chris Liebing - Time - CLR 100</li>
+  <li>Deas - Crypto - CLR 102</li>
+  <li>Deas - Layer - PLANET RHYTHM 074</li>
+  <li>Harvey Mckay - Black Spider - COCOON RECORDINGS DIGITAL 173</li>
+  <li>Lerio Corrado - Overwrite - SECOND STATE 105</li>
+  <li>M.I.T.A. - Dusty - TRONIC 431</li>
+  <li>Robert Hood - Pattern St. - M-PLANT 43</li>
+  <li>Sunil Sharpe - Amun - BPITCH X004</li>
+  <li>The Rhythm Odyssey & Dr Dunks - El Cid - PHANTASY SOUND 114</li>
+  <li>Thomas P. Heckmann - Contagion (BPC Edit) - BPITCH CONTROL 022PT4</li>
+  <li>Burger / Ink - Love Is the Drug (Paris Texas) - MATADOR 334-1</li>
+  <li>Lord Of The Isles - Xit - NAUTILUS RISING 001</li>
+  <li>Maurizio - M7a - MAURIZIO M-7</li>
+  <li>Soft Rocks - Look East - SOFT ROCKS RECORDINGS 004</li>
+  <li>Thomas Brinkmann - Karin 1 - ERNST 06</li>
+  <li>Bryn Green - Blown To Bits - PLANET RHYTHM 21106</li>
+  <li>Confidential Recipe - Starter - REKIDS RSPX 31</li>
+  <li>Dubfire & Flug - Algorithm - DCLTD 26S</li>
+  <li>Dustin Zahn - Crimson Cheeks - REKIDS 192</li>
+  <li>Jonathan Kaspar - Invert Drift - COCOON RECORDINGS DIGITAL 169</li>
+  <li>Marcal - The Interloper - REKIDS RSPX 30</li>
+  <li>Mark Broom & James Ruskin - Erotic Misery - BLUEPRINT 2021</li>
+  <li>Oscar Mulero - Elektra - TOKEN 104D</li>
+  <li>Procombo & Sterac - Orpheus - REKIDS RSPX 32</li>
+  <li>Rene Wise - Marbles - MOTE EVOLVER 060D</li>
+  <li>Stef Mendesidis - Sonica - KLOCKWORKS 33</li>
+  <li>Truncate - First Phase (Planetary Assault Systems Remix) - TRUNCATE 22</li>
+  <li>Truncate - Process - BLUEPRINT 2021</li>
+  <li>DJ Rush - Get On Up (Dave Simon Edit) - PROPER TECHNO TUNES 005</li>
+  <li>Marc Houle - Deckard 7 - ITEMS & THINGS 048</li>
+  <li>Michael Klein - Continuation - COCOON RECORDINGS DIGITAL 047</li>
+  <li>Michael Zager Band - Let's All Chant (Extended) - NOT ON LABEL</li>
+  <li>Paul Kalkbrenner - Part Six - B1 G010003887912D</li>
+  <li>Pig&Dan - Wasted - DRUMCODE 222B</li>
+  <li>Robert Hood - Reflector - M-PLANT 31</li>
+  <li>Samuel L Session - Dumbek - SYXT SPC001</li>
+  <li>Sian - Freakuency (Marc Houle Remix) - OCTOPUS RECORDS 187</li>
+  <li>Tiefschwarz - Green Light - SOUVENIR MUSIC 104</li>
+  <li>Wighnomy Bros. - Wombat - CITY NOISES 269</li>
+  <li>Yves Deruyter - Darkness - FILTH ON ACID 076</li>
+  <li>Adam Beyer - Stone Flower - DRUMCODE 141</li>
+  <li>Butch - Diss You - CECILLE NUMBERS 020</li>
+  <li>Christian Smith - House This House - PLUS 8 RECORDS LTD 127</li>
+  <li>Eduardo De La Calle - Pink Water - CADENZA 87</li>
+  <li>Floorplan - Funky Souls - RUSH HOUR RECORDINGS 1</li>
+  <li>Gerd - Still Believe - DFTD 023</li>
+  <li>Hunzed & Harvey - Sheeta (Mendo Remix) - CLARISSE RECORDS 040</li>
+  <li>Karuva - The Gunslinger - HYPE MUSIK 142</li>
+  <li>Love Over Entropy - Finisterre - SOMETHING HAPPENING SOMEWHERE 010</li>
+  <li>Peter Brown - Tearz (Charles Ramirez & Stan Garac Remix) - HALL OF FAME RECORDS 040</li>
+  <li>San Proper - Leave It To The Doc - RUSH HOUR 13</li>
+  <li>Cristian Vogel - Wind from Nowhere - NOVAMUTE77CD</li>
+  <li>DJ W!LD - Cubana - OFF RECORDINGS 05</li>
+  <li>Joey Beltram - Flash Cube - TRAX 5027</li>
+  <li>Joey Beltram - The Next - TRAX 5027</li>
+  <li>Kellerkind - Charly Braun - STILL VOR TALENT 053</li>
+  <li>Kerri Chandler - Bar A Thym - NRK SOUND DIVISION 111</li>
+  <li>The Godson - Analog Love - RUSH HOUR RECORDINGS 111</li>
+  <li>Tikiman & Paul St. Hilaire & Rhauder - Skank (Cobblestone Jazz Reconstruction) - SUSHITECH 47</li>
+  <li>Arjun Vagale - Function 88 - REKIDS RSPX 39</li>
+  <li>Confidential Recipe - Fank Groove - REKIDS RSPX 49</li>
+  <li>DJ Dextro - The Creator - TRONIC 444</li>
+  <li>Drunken Kong - Strange Feeling - TRONIC 440</li>
+  <li>Frank Biazzi - Confusion - TRONIC 441</li>
+  <li>M.R.E.U.X. - Fokus - BLUMOOG 0162</li>
+  <li>M.R.E.U.X. - Magic Button - BLUMOOG 0162</li>
+  <li>Mark Broom - Game - REKIDS RSPX 35</li>
+  <li>T Raum - Fusion - UPON YOU RECORDS 151</li>
+  <li>Uncertain - Affection - KNEADED PAINS 127</li>
+  <li>Uncertain - Escape - REKIDS RSPX 48</li>
+  <li>D-Unity - Rebirth - UNITY RECORDS 228</li>
+  <li>Filterheadz & Horatio - Bells Of Brightones - KNEADED PAINS 15</li>
+  <li>Kriz - Nautilus (Marcal Remix) - TOKEN 112D</li>
+  <li>Little Fritter - Spicy Boii - CLUB BAD 032</li>
+  <li>Roman Adam - BTW - SENSO SOUNDS 094</li>
+  <li>Second Skin - No Escape - BLUEPRINT RECORDS 066</li>
+  <li>Second Skin - Reformed Theology - BLUEPRINT RECORDS 066</li>
+  <li>Sigha - I Am Apathy, I Am Submission - BLUEPRINT RECORDS 2021</li>
+  <li>Auggië - Kelly - VOKABULARIUM 004</li>
+  <li>Calvin Clarke - Apollo - HOTTRAX 096</li>
+  <li>Damian Lazarus & Gorgon City - Start Over (Reboot Remix) - CROSSTOWN REBELS 270R</li>
+  <li>Friend Within - Pilka (Extended Mix) - TOOLROOM 11960</li>
+  <li>Jay De Lys - Wild & Free - ELROW MUSIC 222</li>
+  <li>Juanito - Tchoukar - HOTTRAX 095</li>
+  <li>Laurent Garnier - Let The People Faire La Fete - COD 3 QR</li>
+  <li>Laurent Garnier - On the REcorD (Part 3) - COD 3 QR</li>
+  <li>Lorenzo De Blanck - Take Me High - HOTTRAX 093</li>
+  <li>Mark Broom & Riva Starr - House Sound (Floorplan Extended Remix) - SNATCH! RECORDS 184</li>
+  <li>Mattias Fridell & Alexander Johansson - Samband - H-PRODUCTIONS 122</li>
+  <li>O.B - Se Puede - SNATCH! RECORDS OFF 069</li>
+  <li>Solardo & Joshwa - VIP Business - INSOMNIAC RECORDS 0227B</li>
+  <li>Christian Smith - Don't Stop - TRONIC 469</li>
+  <li>Hertz - Elec - TRONIC 468</li>
+  <li>Hertz - Fro Me Back - SWAY 36</li>
+  <li>Pan-Pot & Hugh Betcha - Proto - SECOND STATE AUDIO 116</li>
+  <li>Arnaud Le Texier - Pulsar - SOMA RECORDS 672</li>
+  <li>Fixeer - Clutha - UNTERWELT 34</li>
+      </ul>
+    </details>
+  </div>
+</div> 
 
     </div>
   </div>
